@@ -1,9 +1,15 @@
+.logintitle{
+  font-weight: bolder;
+  font-size: 30px;
+}
 .logo{
   height: 80px; 
   border-radius: 30px;}
 .searchbox{
   display: flex;
   justify-content: center;
+  position: relative;
+
 }
 .box{
     padding: 20px;
@@ -29,7 +35,6 @@
   font-family:'Courier New', Courier, monospace;
   font-size: 20px;
   border-radius: 10px;
-  background-color:goldenrod;
   position: relative;
   top: -250px;
 }
@@ -40,6 +45,13 @@ label{
   height: 20px;
   width: 100px;
   color: white;
+}
+.searchbar{
+  font-size: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
 .search{
     border-radius: 20px;
@@ -71,11 +83,11 @@ a{  overflow: hidden;
   position: relative; 
 }
 .desc{
-    font-size: 30px;
+    font-size: 25px;
     top:200px; 
 }
 .title{
-    font-size: 100px;
+    font-size: 120px;
     top:150px
 }
 body{
@@ -101,4 +113,10 @@ body{
 .description{
   position: absolute;
   top:400px;
+}
+.logincontent{
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bolder;
+  padding:10px;
 }

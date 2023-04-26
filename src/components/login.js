@@ -20,9 +20,9 @@ export default function () {
  if(user==""){ 
    return (
   <div className="loginbox">
-      <center>LOGIN</center><br></br>
-      <label className='logincontent'>Username</label><input  id="username" placeholder='username'></input><br></br>
-      <label className='logincontent'>Password </label><input id="password" placeholder='password'></input>
+      <center className="logintitle">LOGIN</center><br></br>
+      <label className='logincontent'>Username</label><input  id="username"  className='logincontent'></input><br></br>
+      <label className='logincontent'>Password </label><input id="password" className='logincontent'></input>
       <button onClick={login} className='logincontent'>submit</button>
   </div>
 )

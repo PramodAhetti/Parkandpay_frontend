@@ -9,6 +9,7 @@ function App() {
       <Navigation></Navigation>
       <Desc className="description"  title="ParkNpay" desc="The Park, Pay, and Go system typically involves the use of technology such as mobile apps, electronic payment systems, and sensors that detect the presence of vehicles in parking spaces. This allows drivers to quickly and easily find available parking spaces, pay for their parking, and exit the parking area without the need for physical cash or tickets"></Desc>
       <Login></Login>
+      <Search className="searchbar"></Search>
     </>
   );
 }
