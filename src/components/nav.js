@@ -1,19 +1,16 @@
 import React from 'react'
 import axios from 'axios'
 export default function nav() {
-  async function near(){
-         let showposition =(data)=>{
-               latitude=data.coords.latitude;
-               longitude=data.coords.longitude;
-         }
-         let latitude,longitude;
-         navigator.geolocation.getCurrentPosition(showposition);
-         let info=await axios.post('user/near',{
-          latitude:latitude,
-          longitude:longitude,
-          radius:100
-         })
-         console.log(info.data)
+  async function position(data){
+    let info=await axios.post('user/near',{
+      latitude:data.coords.latitude,
+      longitude:data.coords.longitude,
+      radius:100
+     })
+     console.log(info.data)
+   }
+  function near(){
+         navigator.geolocation.getCurrentPosition(position);
   }
   return (
     <div className="mainbox">

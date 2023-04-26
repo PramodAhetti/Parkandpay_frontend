@@ -11,7 +11,7 @@ export default function () {
            })
            setuser(`${info.data.user}`)
         }catch(err){
-          console.log(err);
+          alert("wrong username or password")
         }
  }
 
