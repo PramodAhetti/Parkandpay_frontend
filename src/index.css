@@ -1,0 +1,104 @@
+.logo{
+  height: 80px; 
+  border-radius: 30px;}
+.searchbox{
+  display: flex;
+  justify-content: center;
+}
+.box{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 80px;
+}
+.mainbox{
+  display: flex;
+  justify-content: space-between;
+}
+.input{
+    height: 40px;
+    width: 600px;
+    border-radius: 20px;
+}
+.loginbox{
+  font-weight: bolder;
+  width: 200px;
+  padding: 20px;
+  height: 200px;
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color:black;
+  position: relative;
+  top: -250px;
+}
+label{
+  border-radius: 10px;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  height: 20px;
+  width: 100px;
+  color: white;
+}
+.search{
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+}
+a{  overflow: hidden;
+    border-radius: 200px;
+    height: 40px;
+    width: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bolder;
+    color:white;
+    padding: 20px;
+
+}
+.slogo{
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+}
+.desc,.title{
+  border-radius: 130px;
+  font-family:'Courier New', Courier, monospace;
+  color:white;
+  justify-content: center;
+  font-weight: bolder;  
+  position: relative; 
+}
+.desc{
+    font-size: 30px;
+    top:200px; 
+}
+.title{
+    font-size: 100px;
+    top:150px
+}
+body{
+    background-image: url(https://parkmobile.io/wp-content/uploads/2021/08/home-28.png);
+    background-size:cover;
+    width:100%;
+    background-color: blueviolet;
+}
+.back{
+  width: 100%;
+  height: 300px;
+  border-radius: 40px;
+}
+.red{
+    background-color:red;
+}
+.orange{
+    background-color:orange;
+}
+.green{
+    background-color:darkgreen;
+}
+.description{
+  position: absolute;
+  top:400px;
+}

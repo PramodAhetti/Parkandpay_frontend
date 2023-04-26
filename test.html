@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Geolocation API</title>  
+</head>  
+<body>  
+  <h1>Find your Current location</h1>  
+  <p>hi this is from new branch</p>
+<button onclick="getlocation()">Click me</button>  
+<div id="location"></div>  
+<script>  
+    var x= document.getElementById("location");  
+    function getlocation() {  
+        if(navigator.geolocation){  
+            navigator.geolocation.getCurrentPosition(showPosition)  
+          }  
+        else  
+        {  
+             alert("Sorry! your browser is not supporting")  
+         } }  
+       
+     function showPosition(position){  
+        console.log(position.coords.latitude); 
+     }  
+</script>  
+</body>  
+</html>  
