@@ -17,9 +17,9 @@ export default function search() {
          navigator.geolocation.getCurrentPosition(position);
   }
   return (
-    <center className='row searchbox' style={{border:"1px solid black"}}>
-        <input placeholder="location" className="searchbar location"></input>
-        <button className ="searchbar find" onClick={near}>find</button>
+    <center className='searchbox'>
+        <input placeholder="Enter the Location" className="location"></input>
+        <button className ="find" onClick={near}>Find</button>
     </center>
   )
 }

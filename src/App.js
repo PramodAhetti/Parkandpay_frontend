@@ -4,36 +4,38 @@ import Search from './components/search'
 import Test from './components/test'
 import Login from './components/login'
 import Sign from './components/signup'
+
+import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css';
-import { useState } from 'react';
+import { useState } from 'react'
 function App() { 
-  const [user, setuser] = useState("");
-  const loginHandler=(loginInfo)=>{
-console.log(loginInfo);
-setuser(loginInfo)
-  }
+  const [user,setuser]=useState("");
+  async function loginHandler(details){
+    console.log(details);
+      try{
+        let info=await axios.post('/user/login',{
+          username:details.username,
+          password:details.password,
+         })
+         setuser(`${info.data.user}`)
+      }catch(err){
+        alert("wrong username or password")
+      }
+}
+  
   return (
-    <div className='row' style={{border:"1px solid black"
-    // , height:"100vh"
-    }}>
-      <Navigation></Navigation>
-      <Login user={user} handleLogin={loginHandler}></Login>
-      <Search className="searchbar"></Search>
-      <Desc className="description"  title="ParkNpay" desc="The Park, Pay, and Go system typically involves the use of technology such as mobile apps, electronic payment systems, and sensors that detect the presence of vehicles in parking spaces. This allows drivers to quickly and easily find available parking spaces, pay for their parking, and exit the parking area without the need for physical cash or tickets"></Desc>
-{/*      
-     <div className='row' style={{border:"1px solid black", height:"60vh"}}>
-     <div className='col-2' style={{border:"1px solid black", height:"60vh"}}>
+    <div className='box-container'>
+      <Navigation className='item'></Navigation>
+      
+      <Desc className="item"  title="ParkNpay" desc="Book your parking spot now"></Desc>
      
-     
-     </div>
-     <div className='col-10' style={{border:"1px solid black", height:"60vh"}}>
-     
-     
-     </div>
-    </div> */}
-     
-    </div>
+      
+    {
+      user !==''?(<Search className='item' ></Search>):( <Login login={loginHandler}></Login>   )
+
+    }
+
+        </div>
   );
 }
-
 export default App;

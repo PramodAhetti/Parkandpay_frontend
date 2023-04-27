@@ -1,123 +1,121 @@
-.logintitle{
+*{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+} 
+.description{
+  grid-column: 1/11;
+  grid-row: 3;
+}
+.title , .desc{
+  font-family: 'Courier New', Courier, monospace;
+}
+.title{
+  text-shadow: 8px 8px 8px black;
+  font-size: 200px;
+}
+.desc{
+  text-shadow: 3px 3px 3px black;
+  font-size: 40px;
+}
+.location, .find{
+       border-radius: 10px;
+       text-align: center;
+       height: 50px;
+}
+.location{
+  color: black;
+  width: 700px;
+}
+.find{
+  text-shadow: 1px 1px 1px black;
+  width: 100px;
+  color:black;
+}
+.box-container{
+  border: solid 4px rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows:repeat(10,1fr); 
+ 
+  background-image: url(https://parkmobile.io/wp-content/uploads/2021/08/home-28.png);
+  gap:10px;
+  height: 100vh;
+  width: 100%;
+}
+.pages{
+  text-shadow: 3px 3px 3px black;
+  background-color:rgb(9, 76, 9);
+  border-radius: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  font-size: 20px;
   font-weight: bolder;
-  font-size: 30px;
+  color: white;
+  padding: 10px;
+  margin:15px;
+  text-align: center;
+  text-decoration: none;
 }
 .logo{
-  height: 80px; 
-  border-radius: 30px;
+  margin-left: 30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
 }
-.searchbox{
-  display: flex;
-  justify-content: center;
-  position: relative;
-
-}
-.box{
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 80px;
-}
-.navContainer{
+.box ,.navcontainer{
+  align-items: center;
   display: flex;
   justify-content: space-between;
 }
-.input{
-    height: 40px;
-    width: 600px;
-    border-radius: 20px;
+.navcontainer{
+  grid-column: 1/11;
+  grid-row: 2;
 }
-.loginbox{
-  font-weight: bolder;
-  
-  height: 300px;
-  color:white;
-  font-family:'Courier New', Courier, monospace;
-  font-size: 20px;
-  border-radius: 10px;
-  text-align: center;
-  }
-label{
-  border-radius: 10px;
-  font-weight: bolder;
-  font-family: 'Courier New', Courier, monospace;
-  height: 20px;
-  width: 100px;
-  color: white;
-}
-.searchbar{
-  font-size: 40px;
-  border-radius: 10px;
-  position:relative;
-  padding: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
-}
-.search{
-    border-radius: 20px;
-    height: 40px;
-    width: 200px;
-}
-a{  overflow: hidden;
-    border-radius: 200px;
-    height: 40px;
-    width: 80px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    font-weight: bolder;
-    color:white;
-    padding: 20px;
+.inputbox{
+  display: flex;
 
 }
-.slogo{
-  height: 80px;
-  width: 80px;
-  border-radius: 80px;
-}
-.desc,.title{
-  border-radius: 130px;
-  font-family:'Courier New', Courier, monospace;
-  color:white;
+.searchbox{
+  text-align: center;
+  grid-column: 1/11;
+  grid-row : 6  ;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-weight: bolder;  
-  position: relative; 
 }
-.desc{
-    font-size: 25px;
-    top:200px; 
+.item{
+  border:solid 1px black;
 }
-.title{
-    font-size: 120px;
-    top:150px
+.item3{
+  grid-row:6/8;
 }
-body{
-    background-image: url(https://parkmobile.io/wp-content/uploads/2021/08/home-28.png);
-    background-size:cover;
-    width:100%;
-    background-color: blueviolet;
+.loginbox{
+  padding:50px;
+  width: 300px;
+  background-color: rgb(104, 244, 104);
+  border-radius: 20px;
+  grid-row:6;
+  grid-column: 5/8 ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.back{
-  width: 100%;
-  height: 300px;
-  border-radius: 40px;
+input{
+  color: black;
 }
-.red{
-    background-color:red;
+.login_box{
+  margin: 2px;
+  text-align: center;
+  width:100%;
 }
-.orange{
-    background-color:orange;
+.submit{
+  margin:5px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100px; 
 }
-.green{
-    background-color:darkgreen;
-}
-.description{
-  position: absolute;
-  top:400px;
-}
-.logincontent{
-  font-size: 20px;
+input{
+  font-family:'Courier New', Courier, monospace;
   border-radius: 10px;
-  font-weight: bolder;
-  justify-content: left;
-  display: block;
 }

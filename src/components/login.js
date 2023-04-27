@@ -1,35 +1,20 @@
 import React from 'react'
-import axios from 'axios'
 import { useState } from 'react';
-export default function () {
-  
-    async function login(){
-        try{
-          let info=await axios.post('/user/login',{
-            username:document.getElementById("username").value,
-            password:document.getElementById("password").value
-           })
-           setuser(`${info.data.user}`)
-        }catch(err){
-          alert("wrong username or password")
-        }
- }
+import { Button } from 'bootstrap';
 
 
 
- if(user==""){ 
+export default function (props) {
+const loginUser=()=>{
+  props.login({username:document.getElementById("username").value,password:document.getElementById("password").value})
+}
+
+ 
    return (
-  <div className="row loginbox"  style={{border:"1px solid black"}}>
-      <div className="col-4 offset-md-2 logintitle"  style={{border:"1px solid black"}}>
-        <h4>
-        LOGIN
-        </h4>
-      <label className='logincontent'>Username</label><input  id="username"  className='logincontent'></input>
-      <label className='logincontent'>Password </label><input id="password" className='logincontent'></input>
-      
-      <button onClick={login} className='logincontent'>submit</button>
-      </div>
+  <div className="loginbox" >
+       <input id="username" className='login_box' placeholder='Username'></input>
+       <input id="password" className='login_box' placeholder='Password'></input>
+       <button className="submit" style={{color:"black"}}  onClick={loginUser}>Login</button>
   </div>
 )
- }
 }
