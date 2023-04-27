@@ -4,7 +4,8 @@
 }
 .logo{
   height: 80px; 
-  border-radius: 30px;}
+  border-radius: 30px;
+}
 .searchbox{
   display: flex;
   justify-content: center;
@@ -17,7 +18,7 @@
     justify-content: space-around;
     border-radius: 80px;
 }
-.mainbox{
+.navContainer{
   display: flex;
   justify-content: space-between;
 }
@@ -28,16 +29,14 @@
 }
 .loginbox{
   font-weight: bolder;
-  width: 200px;
-  padding: 20px;
-  height: 200px;
+  
+  height: 300px;
   color:white;
   font-family:'Courier New', Courier, monospace;
   font-size: 20px;
   border-radius: 10px;
-  position: relative;
-  top: -250px;
-}
+  text-align: center;
+  }
 label{
   border-radius: 10px;
   font-weight: bolder;
@@ -49,6 +48,7 @@ label{
 .searchbar{
   font-size: 40px;
   border-radius: 10px;
+  position:relative;
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bolder;
@@ -118,5 +118,6 @@ body{
   font-size: 20px;
   border-radius: 10px;
   font-weight: bolder;
-  padding:10px;
+  justify-content: left;
+  display: block;
 }
