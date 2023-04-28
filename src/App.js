@@ -1,15 +1,23 @@
 import Navigation from './components/nav'
 import Desc from './components/description'
 import Search from './components/search'
-import Test from './components/test'
 import Login from './components/login'
 import Sign from './components/signup'
+import Map from './components/map.js'
 
-import axios from 'axios'
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
-import { useState } from 'react'
+import { useState } from 'react';
 function App() { 
   const [user,setuser]=useState("");
+  const [latitude,setlatitude]=useState(18.4489486);
+  const [longitude,setlongitude]=useState(73.8536568);
+ 
+  function updatepos(lat,lon){
+        setlatitude(lat);
+        setlongitude(lon);
+  }
+
   async function signupHandler(details){
     console.log(details);
       try{
@@ -28,7 +36,9 @@ function App() {
         alert("Something went wrong try again");
       }
 }
-  async function loginHandler(details){
+
+
+async function loginHandler(details){
     console.log(details);
       try{
         let info=await axios.post('/user/login',{
@@ -44,15 +54,12 @@ function App() {
   return (
     <div className='box-container'>
       <Navigation className='item'></Navigation>
-      <Desc className="item"  title="ParkNpay" desc="Book your parking spot now"></Desc>
-     
-      
+
     {
-      user !==''?(<Search className='item' ></Search>):(<> <Login login={loginHandler}></Login>  <Sign signup={signupHandler}></Sign></> )
+      user !=='' ?(<><Map lat={latitude} lon={longitude}></Map><Search updatepos={updatepos} className='item'></Search></>):(<> <Desc className="item"  title="ParkNpay" desc="Book your parking spot now"></Desc> <Login login={loginHandler}></Login>  <Sign signup={signupHandler}></Sign> </> )
+    } 
 
-    }
-
-        </div>
+    </div>
   );
 }
 export default App;

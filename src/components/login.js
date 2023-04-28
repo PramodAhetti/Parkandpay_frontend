@@ -12,6 +12,7 @@ const loginUser=()=>{
  
    return (
   <div className="loginbox" >
+       <br></br>
        <input id="username" className='login_box' placeholder='Username'></input>
        <input id="password" className='login_box' placeholder='Password'></input>
        <button className="submit" style={{color:"black"}}  onClick={loginUser}>Login</button>

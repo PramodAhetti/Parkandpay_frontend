@@ -5,7 +5,7 @@
 } 
 .description{
   grid-column: 1/11;
-  grid-row: 3;
+  grid-row: 4/5;
 }
 .title , .desc{
   font-family: 'Courier New', Courier, monospace;
@@ -19,13 +19,15 @@
   font-size: 40px;
 }
 .location, .find{
-       border-radius: 10px;
+      margin: 10px;
+       font-size: 20px;
+       border-radius: 20px;
        text-align: center;
-       height: 50px;
+       height: 70px;
 }
 .location{
   color: black;
-  width: 700px;
+  width: 900px;
 }
 .find{
   text-shadow: 1px 1px 1px black;
@@ -40,13 +42,13 @@
  
   background-image: url(https://parkmobile.io/wp-content/uploads/2021/08/home-28.png);
   gap:10px;
-  height: 100vh;
+  height: 800px;
   width: 100%;
 }
 .pages{
   text-shadow: 2px 2px 3px black;
-  background-color:rgb(3, 115, 3);
   border-radius: 15px;
+  border: solid 2px white;
   font-family: 'Courier New', Courier, monospace;
   width: 100%;
   font-size: 20px;
@@ -87,9 +89,6 @@
 .item{
   border:solid 1px black;
 }
-.item3{
-  grid-row:6/8;
-}
 input{
   color: black;
 }
@@ -111,24 +110,31 @@ input{
 .loginbox{
   padding:50px;
   width: 300px;
-  height: 200px;
-  background-color: rgb(64, 233, 64);
+  /* height: 200px; */
   border-radius: 20px;
   grid-row:6;
-  grid-column: 4/5;
+  grid-column: 5/6;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.loginbox, .signupbox{
+  border: solid 3px white;
+  background-image: url(https://parkmobile.io/wp-content/uploads/2021/08/home-28.png);
 }
 .signupbox{
   border-radius: 20px;
   padding:50px;
   width: 300px;
   height: 250px;
-  background-color: rgb(64, 233, 64);
   display: flex;
   align-items: center;
   flex-direction: column;
   grid-row: 6;
-  grid-column: 7/8 ;
+  grid-column: 6/7 ;
+}
+.mapbox{
+  grid-row: 4;
+  grid-column: 4/8 ;
+  border-radius: 40px;
 }

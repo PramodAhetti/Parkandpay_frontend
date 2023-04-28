@@ -1,14 +1,20 @@
 import React from 'react'
 import axios from 'axios'
-export default function search() {
-  async function position(data){
+export default function Search(props) {
+
+  async function position(pos){
           try{
             let info=await axios.post('user/near',{
-              latitude:data.coords.latitude,
-              longitude:data.coords.longitude,
-              radius:100
+              latitude:pos.coords.latitude,
+              longitude:pos.coords.longitude,
+              radius:5
              })
-             console.log(info.data);  
+             console.log(info.data[0]);   
+             if(info.data[0]){
+                props.updatepos(info.data[0].latitude,info.data[0].longitude);
+             }else{
+                alert("No parking spot found near your location");
+             }
           }catch(err){
              console.log(err);
              alert('Login required')
@@ -19,8 +25,8 @@ export default function search() {
   }
   return (
     <center className='searchbox'>
-        <input placeholder="location" className="searchbar location"></input>
-        <button className ="searchbar find" onClick={near}>find</button>
+        <input placeholder="Location" className="searchbar location"></input>
+        <button className ="searchbar find" onClick={near}>Find</button>
     </center>
   )
 }
