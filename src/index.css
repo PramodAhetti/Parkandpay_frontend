@@ -44,8 +44,8 @@
   width: 100%;
 }
 .pages{
-  text-shadow: 3px 3px 3px black;
-  background-color:rgb(9, 76, 9);
+  text-shadow: 2px 2px 3px black;
+  background-color:rgb(3, 115, 3);
   border-radius: 15px;
   font-family: 'Courier New', Courier, monospace;
   width: 100%;
@@ -93,7 +93,7 @@
 .loginbox{
   padding:50px;
   width: 300px;
-  background-color: rgb(104, 244, 104);
+  background-color: rgb(3, 129, 3);
   border-radius: 20px;
   grid-row:6;
   grid-column: 5/8 ;
