@@ -90,17 +90,6 @@
 .item3{
   grid-row:6/8;
 }
-.loginbox{
-  padding:50px;
-  width: 300px;
-  background-color: rgb(3, 129, 3);
-  border-radius: 20px;
-  grid-row:6;
-  grid-column: 5/8 ;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 input{
   color: black;
 }
@@ -118,4 +107,28 @@ input{
 input{
   font-family:'Courier New', Courier, monospace;
   border-radius: 10px;
+}
+.loginbox{
+  padding:50px;
+  width: 300px;
+  height: 200px;
+  background-color: rgb(64, 233, 64);
+  border-radius: 20px;
+  grid-row:6;
+  grid-column: 4/5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.signupbox{
+  border-radius: 20px;
+  padding:50px;
+  width: 300px;
+  height: 250px;
+  background-color: rgb(64, 233, 64);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-row: 6;
+  grid-column: 7/8 ;
 }
