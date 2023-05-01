@@ -5,7 +5,7 @@
 } 
 .description{
   grid-column: 1/13 ;
-  grid-row: 9/10;
+  grid-row: 8;
 }
 .title , .desc{
   font-family: 'Courier New', Courier, monospace;
@@ -16,7 +16,7 @@
 }
 .desc{
   text-shadow: 3px 3px 3px black;
-  font-size:2vw;
+  font-size:1.5vw;
 }
 .location, .find{
       margin: 10px;
@@ -75,7 +75,7 @@
 }
 .navcontainer{
   grid-column: 1/13;
-  grid-row: 2;
+  grid-row: 1;
 }
 .inputbox{
   display: flex;
@@ -140,7 +140,7 @@ input{
 }
 .mapbox{
   width: 1000px;
-  height: 300px;
+  height: 400px;
   grid-row: 5/8;
   grid-column: 3/13;
   border-radius: 40px;
