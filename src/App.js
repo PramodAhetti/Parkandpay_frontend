@@ -5,7 +5,9 @@ import Login from './components/login'
 import Sign from './components/signup'
 import Map from './components/map.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Authprovider from './context/authentication/authprovider'
 import axios from 'axios';
+import Provider from './context/provider'
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
 function App() { 
@@ -18,24 +20,6 @@ function App() {
         setlongitude(lon);
   }
 
-  async function signupHandler(details){
-    console.log(details);
-      try{
-        let info=await axios.post('/user/new',{
-          name:details.name,
-          username:details.username,
-          password:details.password,
-          email:details.email
-         })
-         if(info.data.message=="user exists"){
-          alert("Try again username exists")
-         }else{
-          setuser(details.username);
-         }
-      }catch(err){
-        alert("Something went wrong try again");
-      }
-}
 
 
 async function loginHandler(details){
@@ -52,6 +36,8 @@ async function loginHandler(details){
 }
   
   return (
+    <Authprovider>
+    <Provider>
     <BrowserRouter>
       <div className='box-container'>
         <Navigation className='item' />
@@ -63,6 +49,8 @@ async function loginHandler(details){
         </Routes>
       </div>
     </BrowserRouter>
+    </Provider>
+    </Authprovider>
   );
 }
 export default App;
