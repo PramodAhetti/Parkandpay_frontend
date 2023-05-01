@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Map from '../components/map'
 export default function Search(props) {
 
   async function position(pos){
@@ -23,10 +24,12 @@ export default function Search(props) {
   function near(){
          navigator.geolocation.getCurrentPosition(position);
   }
-  return (
-    <center className='searchbox'>
+  return (<>
+        <Map className="mapbox" lat={13.45} lon={85.45}></Map>
+        <center className='searchbox'>
         <input placeholder="Location" className="searchbar location"></input>
         <button className ="searchbar find" onClick={near}>Find</button>
     </center>
+    </>
   )
 }

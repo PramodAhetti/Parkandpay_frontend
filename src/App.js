@@ -4,7 +4,7 @@ import Search from './components/search'
 import Login from './components/login'
 import Sign from './components/signup'
 import Map from './components/map.js'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
@@ -52,14 +52,17 @@ async function loginHandler(details){
 }
   
   return (
-    <div className='box-container'>
-      <Navigation className='item'></Navigation>
-
-    {
-      user !=='' ?(<><Map lat={latitude} lon={longitude}></Map><Search updatepos={updatepos} className='item'></Search></>):(<> <Desc className="item"  title="ParkNpay" desc="Book your parking spot now"></Desc> <Login login={loginHandler}></Login>  <Sign signup={signupHandler}></Sign> </> )
-    } 
-
-    </div>
+    <BrowserRouter>
+      <div className='box-container'>
+        <Navigation className='item' />
+        <Routes>
+          <Route path='' element={<Desc className="description" title="ParkNPay" desc="Book or sell your parking spots now"></Desc>}/>
+          <Route path='/find' element={<Search />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Sign />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 export default App;

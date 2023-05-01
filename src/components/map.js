@@ -29,7 +29,7 @@ function Map({ lat, lon }) {
     };
   }, [lat, lon]);
 
-  return    <div className="mapbox"id="map" style={{  width: "1000px",height: "400px" }}></div>;
+  return    <div className="mapbox"id="map" ></div>;
 }
 
 export default Map;
