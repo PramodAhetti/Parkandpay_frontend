@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-
+// import "leaflet/dist/leaflet-routing-machine.css";
+import "leaflet-routing-machine";
 // Import your custom marker icon image
 import markerIcon from "./marker-icon-pink.png";
-
+import { useContext } from "react";
+import userdetails from '../context/userdetails/userdetail'
 // Create a new icon object
 const customIcon = L.icon({
   iconUrl: markerIcon,
@@ -14,6 +16,10 @@ const customIcon = L.icon({
 });
 
 function Map({ lat, lon }) {
+  var cur=useContext(userdetails);
+  cur=cur.position;
+  console.log(cur);
+  console.log(lat,lon)
   React.useEffect(() => {
     const map = L.map("map").setView([lat, lon], 13);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -23,7 +29,12 @@ function Map({ lat, lon }) {
     
     // Pass the custom icon to the marker function
     L.marker([lat, lon], { icon: customIcon }).addTo(map);
-
+    L.marker([cur.latitude,cur.longitude], { icon: customIcon }).addTo(map);
+    L.Routing.control({
+      waypoints: [
+        L.latLng(cur.latitude,cur.longitude),
+        L.latLng(lat, lon),
+      ]}).addTo(map);
     return () => {
       map.remove();
     };

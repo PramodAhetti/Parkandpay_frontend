@@ -11,8 +11,9 @@ export default function Nav() {
     <div className='box'>
     <Link  className="pages" to=''>Home</Link>
     <Link  className="pages" to='/find'>Find</Link>
+    <Link  className="pages" to='/about'>About</Link>
     {usercontext.user.username=='Login' ? (    <Link  className="pages" to='/signup'>Signup</Link>) : (<></>)}
-    <Link  className="pages" to='/login'>{usercontext.user.username}</Link>  
+    <Link  className="pages" to='/login'>{usercontext.user.username}</Link>    
     </div>
     </div>  
   )

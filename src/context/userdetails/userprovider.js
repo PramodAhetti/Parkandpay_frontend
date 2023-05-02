@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
-import Context from './maincontext'
+import Context from './userdetail'
 export default function Provider({children}) {
-    const [curpark,setcurpark]=useState('');
+    const [curpark,setcurpark]=useState({latitude:13,longitude:85});
 
     function updatecurpark(data){
         setcurpark(data);
     }
     
-    const [pos,setposition]=useState({
+    const [position,setposition]=useState({
         "latitude":13,
         "longitude":85
     });
     function setpos(pos){
         setposition(pos);
     }
-    let position=pos;
     return (
     <Context.Provider value={{curpark,updatecurpark,position,setpos}}>
         {children}
