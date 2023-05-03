@@ -35,11 +35,13 @@ export default function Signup() {
 
   return (
     <div className="signupbox" >
+            <br></br>
             <input id="name" className='login_box' placeholder='First name'></input>
             <input id="new-username" className='login_box' placeholder='Username'></input>
             <input id="new-password" className='login_box' placeholder='Password'></input>
             <input id="email" className='login_box' placeholder='email'></input>
             <button className="submit" onClick={signup} style={{color:"black"}} >Signup</button>
+            <br></br>
     </div>
   )
 }

@@ -1,38 +1,49 @@
-*{   
-  font-family:monospace;
+*{  
+  font-family:'Courier New', Courier, monospace;
   font-weight: bold;
   color: white;
+  
+  border-radius: 1.5vw;
 } 
 .description{
   grid-column: 1/13 ;
-  grid-row: 10;
-}
-.title , .desc{
-  font-family: 'Courier New', Courier, monospace;
+  grid-row: 7/9;
 }
 .title{
   text-shadow: 8px 8px 8px black;
-  font-size: 15vw;
+  font-size: 10vw;
 }
 .desc{
   text-shadow: 3px 3px 3px black;
-  font-size:1.8vw;
+  font-size:1.4vw;
+}
+.mapbox{
+    border-radius: 1.5vw;
+    grid-row: 3/9;
+    grid-column: 2/11;
+
+}
+.searchbox{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-row: 10/11;
+  grid-column: 2/11;
 }
 .location, .find{
-      margin: 10px;
-       font-size: 20px;
-       border-radius: 20px;
+       border-radius: 1.5vw;
+       color:black;
+       text-shadow: 1px 1px 1px black;
+       font-size: 1.2vw;
        text-align: center;
-       height: 70px;
 }
 .location{
-  color: black;
   width: 40vw;
 }
 .find{
-  text-shadow: 1px 1px 1px black;
-  width: 100px;
-  color:black;
+  width: 10vw;
+ 
 }
 body {
   margin: 0;
@@ -40,12 +51,11 @@ body {
 }
 .box-container{
   overflow: hidden;
-  border: solid 4px rgb(0, 0, 0);
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows:repeat(12,1fr); 
   background-image: url(https://wallpaperaccess.com/full/2996087.jpg) ;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;
   background-size: 100%;
@@ -53,18 +63,11 @@ body {
   width: 100%;
 }
 .pages{
-  text-shadow: 2px 2px 3px black;
-  border-radius: 15px;
-  border: solid 2px white;
-  font-family: 'Courier New', Courier, monospace;
-  width: 100%;
-  font-size: 20px;
-  font-weight: bolder;
-  color: white;
-  padding: 10px;
-  margin:15px;
-  text-align: center;
   text-decoration: none;
+  text-shadow: 4px 4px 4px black;
+  color: white;
+  margin: 1.3vw;
+  font-size: 1.8vw;
 }
 .logo{
   margin-left: 30px;
@@ -73,7 +76,7 @@ body {
   border-radius: 25px;
 }
 .box ,.navcontainer{
-
+  font-size: 1em;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -82,81 +85,47 @@ body {
   grid-column: 1/13;
   grid-row: 1;
 }
-.inputbox{
-  background-color: rgba(0,0,0, 0.5); 
+/* .inputbox{
+  
   display: flex;
 
-}
-.searchbox{
-  background-color: rgba(0,0,0, 0.5); 
-  text-align: center;
-  grid-column: 1/13;
-  grid-row : 9 ;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+} */
 .item{
   border:solid 1px black;
 }
 input{
   color: black;
 }
+
+
+input{
+
+}
+.loginbox,.signupbox{
+  background-color: rgba(112, 104, 104, 0.7); 
+  grid-row: 5/11;
+  grid-column: 5/9;
+  border: solid 0.2VW white;
+  border-radius: 1.5vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .login_box{
-  color: white;
-  font-size: 1.5em;
-  background-color: rgba(0,0,0, 0.5); 
-  margin: 2px;
+  margin: 0.2vh;
   text-align: center;
-  width:80%;
+  border-radius: 1.5vw;
+  font-size: 1.2vw;
+  width: 25vw;
+  height: 8vh;
 }
 .submit{
-  font-size: 1.5em;
-  margin:5px;
-  border-radius: 8px;
-  font-family: 'Courier New', Courier, monospace;
-  height: auto;
-  width: 100%; 
-}
-input{
-  font-family:'Courier New', Courier, monospace;
-  border-radius: 10px;
-  height: 40px;
-}
-.loginbox{
-  background-color: rgba(0,0,0, 0.5); 
-  padding:50px;
-  border-radius: 20px;
-  grid-row:6;
-  grid-column: 5/7;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.loginbox, .signupbox{
-  background-color: rgba(0,0,0, 0.5); 
-  justify-content: space-evenly;
-  border: solid 3px white;
-  grid-row: 7;
-  grid-column: 6/8 ;
-  width: 25vw;
-  height: 20vw;
-}
-.signupbox{
-  background-color: rgba(0,0,0, 0.5); 
-  border-radius: 20px;
-  padding:50px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.mapbox{
-  background-color: rgba(0,0,0, 0.5); 
-  width: 65vw;
-  height: 25vw;
-  grid-row: 5/8;
-  grid-column: 3/13;
-  border-radius: 40px;
+  font-size: 1vw;
+  text-align: center;
+  border-radius: 1.5vw;
+ width: 7vw;
+ height: 6vh;
 }
 .leaflet-marker-icon, .leaflet-routing-alt{
   font-size: 0px;
@@ -164,13 +133,15 @@ input{
   alt: none;
 }
 .aboutbox{
-  background-color: rgba(0,0,0, 0.5); 
-  font-size: 2.5em;
-  width: 50vw;
-  border: solid 5px white ;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  grid-row: 6;
-  grid-column: 6;
+
+  display: flex;
+  flex-direction: column;
+  grid-row: 3/9;
+  grid-column: 2/12;
+  font-size: 1.5em;
+  padding: 1vw;
+}
+.heading{
+ font-size:2.2em; 
+ text-align: center;
 }
