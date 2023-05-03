@@ -1,11 +1,11 @@
-*{
-  font-family:Arial, Helvetica, sans-serif;
+*{   
+  font-family:monospace;
   font-weight: bold;
   color: white;
 } 
 .description{
   grid-column: 1/13 ;
-  grid-row: 8;
+  grid-row: 10;
 }
 .title , .desc{
   font-family: 'Courier New', Courier, monospace;
@@ -44,8 +44,10 @@ body {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows:repeat(12,1fr); 
-  background-image: url(https://wallpaperaccess.com/full/2996087.jpg);
+  background-image: url(https://wallpaperaccess.com/full/2996087.jpg) ;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-size: 100%;
   height: 100vh;
   width: 100%;
@@ -71,6 +73,7 @@ body {
   border-radius: 25px;
 }
 .box ,.navcontainer{
+
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -80,10 +83,12 @@ body {
   grid-row: 1;
 }
 .inputbox{
+  background-color: rgba(0,0,0, 0.5); 
   display: flex;
 
 }
 .searchbox{
+  background-color: rgba(0,0,0, 0.5); 
   text-align: center;
   grid-column: 1/13;
   grid-row : 9 ;
@@ -98,15 +103,20 @@ input{
   color: black;
 }
 .login_box{
+  color: white;
+  font-size: 1.5em;
+  background-color: rgba(0,0,0, 0.5); 
   margin: 2px;
   text-align: center;
-  width:100%;
+  width:80%;
 }
 .submit{
+  font-size: 1.5em;
   margin:5px;
   border-radius: 8px;
   font-family: 'Courier New', Courier, monospace;
-  width: 100px; 
+  height: auto;
+  width: 100%; 
 }
 input{
   font-family:'Courier New', Courier, monospace;
@@ -114,6 +124,7 @@ input{
   height: 40px;
 }
 .loginbox{
+  background-color: rgba(0,0,0, 0.5); 
   padding:50px;
   border-radius: 20px;
   grid-row:6;
@@ -123,6 +134,7 @@ input{
   flex-direction: column;
 }
 .loginbox, .signupbox{
+  background-color: rgba(0,0,0, 0.5); 
   justify-content: space-evenly;
   border: solid 3px white;
   grid-row: 7;
@@ -131,6 +143,7 @@ input{
   height: 20vw;
 }
 .signupbox{
+  background-color: rgba(0,0,0, 0.5); 
   border-radius: 20px;
   padding:50px;
   display: flex;
@@ -138,6 +151,7 @@ input{
   flex-direction: column;
 }
 .mapbox{
+  background-color: rgba(0,0,0, 0.5); 
   width: 65vw;
   height: 25vw;
   grid-row: 5/8;
@@ -148,4 +162,15 @@ input{
   font-size: 0px;
   display: none;
   alt: none;
+}
+.aboutbox{
+  background-color: rgba(0,0,0, 0.5); 
+  font-size: 2.5em;
+  width: 50vw;
+  border: solid 5px white ;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  grid-row: 6;
+  grid-column: 6;
 }

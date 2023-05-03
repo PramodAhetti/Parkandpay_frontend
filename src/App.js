@@ -2,6 +2,7 @@ import Navigation from './components/nav'
 import Desc from './components/description'
 import Search from './components/search'
 import Login from './components/login'
+import About from './components/about'
 import Sign from './components/signup'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Authprovider from './context/authentication/authprovider'
@@ -20,6 +21,7 @@ function App() {
           <Route path='/find' element={<Search />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Sign />} />
+          <Route path='/about' element={<About/>}/>
         </Routes>
       </div>
     </BrowserRouter>
