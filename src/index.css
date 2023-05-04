@@ -2,8 +2,6 @@
   font-family:'Courier New', Courier, monospace;
   font-weight: bold;
   color: white;
-  
-  border-radius: 1.5vw;
 } 
 .description{
   grid-column: 1/13 ;
@@ -54,8 +52,9 @@ body {
   display: grid;
   grid-template-columns: repeat(12,1fr);
   grid-template-rows:repeat(12,1fr); 
+  background-color: black;
   background-image: url(https://wallpaperaccess.com/full/2996087.jpg) ;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-size: 100%;
@@ -63,11 +62,16 @@ body {
   width: 100%;
 }
 .pages{
+  border: solid 1px white;
+  padding: 1vw;
   text-decoration: none;
   text-shadow: 4px 4px 4px black;
   color: white;
-  margin: 1.3vw;
-  font-size: 1.8vw;
+  margin: 0.5vw;
+  font-size: 1.3vw;
+}
+input{
+  color: black;
 }
 .logo{
   margin-left: 30px;
@@ -85,24 +89,13 @@ body {
   grid-column: 1/13;
   grid-row: 1;
 }
-/* .inputbox{
-  
-  display: flex;
 
-} */
 .item{
   border:solid 1px black;
 }
-input{
-  color: black;
-}
 
-
-input{
-
-}
 .loginbox,.signupbox{
-  background-color: rgba(112, 104, 104, 0.7); 
+  background-color: rgba(33, 29, 29, 0.6); 
   grid-row: 5/11;
   grid-column: 5/9;
   border: solid 0.2VW white;

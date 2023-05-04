@@ -1,32 +1,17 @@
 import React from 'react'
-import axios from 'axios';
 import { useContext } from 'react';
 import authcontext from '../context/authentication/authenticationcontext';
 
   const Login = () => {
-    let usercontext=useContext(authcontext);
-    async function loginuser() {
-      try {
-        let user={
-          username: document.getElementById("username").value,
-          password:document.getElementById("password").value
-        }
-        let info = await axios.post('/user/login',user);
+    let auth=useContext(authcontext);
 
-        alert("logged in")
-        usercontext.updateuser({username:user.username});
-        console.log(usercontext.user.username)
-      } catch (err) {
-        alert("Wrong username or password !!!")
-      }
-    }
  
    return (
   <div className="loginbox" >
        <br></br>
        <input id="username" className='login_box' placeholder='Username'></input>
        <input id="password" className='login_box' placeholder='Password'></input>
-       <button className="login_box submit" style={{color:"black"}}  onClick={loginuser}>Login</button>
+       <button className="login_box submit" style={{color:"black"}}  onClick={auth.loginuser}>Login</button>
   </div>
 )
 }

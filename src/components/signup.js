@@ -12,26 +12,9 @@ export default function Signup() {
       password:document.getElementById('new-password').value,
       email:document.getElementById('email').value,
     }
-    signupHandler(details);
+    usercontext.signupHandler(details);
   }
-  async function signupHandler(details){
-    console.log(details);
-      try{
-        let info=await axios.post('/user/new',{
-          name:details.name,
-          username:details.username,
-          password:details.password,
-          email:details.email
-         })
-         if(info.data.message=="user exists"){
-          alert("Try again username exists")
-         }else{
-          usercontext.updateuser({username:details.username})
-         }
-      }catch(err){
-        alert("Something went wrong try again");
-      }
-}
+
 
   return (
     <div className="signupbox" >

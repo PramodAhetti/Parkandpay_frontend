@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 // import "leaflet/dist/leaflet-routing-machine.css";
@@ -16,9 +16,9 @@ const customIcon = L.icon({
 });
 
 function Map({ lat, lon }) {
-  var cur=useContext(userdetails);
-  cur=cur.position;
-  console.log(cur);
+  var current=useContext(userdetails);
+  current=current.userposition;
+  console.log(current);
   console.log(lat,lon)
   React.useEffect(() => {
     const map = L.map("map").setView([lat, lon], 13);
@@ -29,10 +29,10 @@ function Map({ lat, lon }) {
     
     // Pass the custom icon to the marker function
     L.marker([lat, lon], { icon: customIcon }).addTo(map);
-    L.marker([cur.latitude,cur.longitude], { icon: customIcon }).addTo(map);
+    L.marker([current.latitude,current.longitude], { icon: customIcon }).addTo(map);
     L.Routing.control({
       waypoints: [
-        L.latLng(cur.latitude,cur.longitude),
+        L.latLng(current.latitude,current.longitude),
         L.latLng(lat, lon),
       ]}).addTo(map);
     return () => {
