@@ -17,7 +17,7 @@ function App() {
     <Navigation className='item' />
     <Userdetail>
     <Routes>
-      <Route path='' element={<Desc className="description" title="ParkNPay" desc="Welcome to ParkandPay - the smarter way to park! "></Desc>}/>
+      <Route path='' element={<Desc className="description" title=".ParkNPay" desc=".Welcome to ParkandPay - the smarter way to park!."></Desc>}/>
       <Route path='/find' element={<Search />} />
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Sign />} />

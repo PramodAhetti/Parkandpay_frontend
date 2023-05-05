@@ -25,6 +25,7 @@ export default function Signup() {
             <input id="new-username" className='login_box' placeholder='Username'></input>
             <input id="new-password" className='login_box' placeholder='Password'></input>
             <input id="email" className='login_box' placeholder='email'></input>
+            <br></br>
             <button className="submit" onClick={signup} style={{color:"black"}} >Signup</button>
             <br></br>
     </div>

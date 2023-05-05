@@ -18,7 +18,8 @@ export default function Search() {
     }
     );
   }
-  return (<>
+  return (
+    <>
         <Map className="mapbox" lat={userstate.currentspot.latitude} lon={userstate.currentspot.longitude}></Map>
         <center className='searchbox'>
         <input placeholder="Location" className="searchbar location"></input>

@@ -40,6 +40,7 @@ export default function Provider({children}) {
     function near(pos){
         setuserposition(pos);
         axios.post('user/near', pos).then((info)=>{
+            console.log(info.data)
             if(info.data!=''){
               setspot(info.data[0]);
               alert("Showing nearest spot");

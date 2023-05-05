@@ -17,6 +17,7 @@ export default function Authprovider({children}) {
          if(info.data.message=="user exists"){
           alert("Try again username exists")
          }else{
+          alert("Logged in")
           setuser({username:details.username,auth_token:info.data.auth_token});
           localStorage.setItem('user_id',info.data.user_id);
          }
