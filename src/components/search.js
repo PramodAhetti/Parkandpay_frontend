@@ -22,7 +22,7 @@ export default function Search() {
     <>
         <Map className="mapbox" lat={userstate.currentspot.latitude} lon={userstate.currentspot.longitude}></Map>
         <center className='searchbox'>
-        <input placeholder="Location" className="searchbar location"></input>
+        <input placeholder="Location find" className="searchbar location"></input>
         <button className ="searchbar find" onClick={near}>Find</button>
         <button className ="searchbar find" onClick={userstate.book}>Book</button>
         <button className ="searchbar find" onClick={userstate.cancel}>Cancel</button>

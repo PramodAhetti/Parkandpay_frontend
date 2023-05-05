@@ -16,6 +16,7 @@ import authcontext from '../context/authentication/authenticationcontext';
        <input id="password" className='login_box' placeholder='Password'></input>
        <br></br>
        <button className="login_box submit" style={{color:"black"}}  onClick={auth.loginuser}>Login</button>
+       <br></br>
   </div>
 </>
 )
