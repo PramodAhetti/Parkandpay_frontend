@@ -17,7 +17,8 @@ export default function Authprovider({children}) {
          if(info.data.message=="user exists"){
           alert("Try again username exists")
          }else{
-          setuser({username:details.username})
+          setuser({username:details.username,auth_token:info.data.auth_token});
+          localStorage.setItem('user_id',info.data.user_id);
          }
       }catch(err){
         alert("Something went wrong try again");
@@ -31,7 +32,8 @@ export default function Authprovider({children}) {
         password:document.getElementById("password").value
       }
       let info=await axios.post('/user/login',newuser);
-      localStorage.setItem('auth_token',info.data);
+      localStorage.setItem('auth_token',info.data.auth_token);
+      localStorage.setItem('user_id',info.data.user_id);
       console.log(localStorage.getItem('auth_token'))
       setuser({username:newuser.username});
       alert("logged in")

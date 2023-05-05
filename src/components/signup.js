@@ -18,6 +18,8 @@ export default function Signup() {
 
   return (
     <div className="signupbox" >
+        <br></br>
+            <div className='titleforloginandsignup'> Park N Pay</div>
             <br></br>
             <input id="name" className='login_box' placeholder='First name'></input>
             <input id="new-username" className='login_box' placeholder='Username'></input>

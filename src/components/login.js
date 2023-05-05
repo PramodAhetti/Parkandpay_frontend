@@ -7,12 +7,16 @@ import authcontext from '../context/authentication/authenticationcontext';
 
  
    return (
-  <div className="loginbox" >
+<>
+<div className="loginbox" >
+  <br></br>
+<div className='titleforloginandsignup'> Park N Pay</div>
        <br></br>
        <input id="username" className='login_box' placeholder='Username'></input>
        <input id="password" className='login_box' placeholder='Password'></input>
        <button className="login_box submit" style={{color:"black"}}  onClick={auth.loginuser}>Login</button>
   </div>
+</>
 )
 }
 export default Login;

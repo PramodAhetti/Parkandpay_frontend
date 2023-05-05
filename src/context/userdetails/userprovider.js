@@ -29,7 +29,14 @@ export default function Provider({children}) {
              alert(error.response.data.message)
         }
     }
-
+    async function sell(){
+      try{
+        let res=await axios.post('/user/sell',{latitude:userposition.latitude,longitude:userposition.longitude,owned_id:localStorage.getItem('user_id')});
+        alert(res.data.message);
+     }catch(error){
+        alert(error.response.data.message)
+     }     
+    }
     function near(pos){
         setuserposition(pos);
         axios.post('user/near', pos).then((info)=>{
@@ -44,7 +51,7 @@ export default function Provider({children}) {
             })
     }
     return (
-    <Userdetails.Provider value={{currentspot,userposition,near,cancel,book}}>
+    <Userdetails.Provider value={{currentspot,userposition,near,cancel,book,sell}}>
         {children}
     </Userdetails.Provider>
   )

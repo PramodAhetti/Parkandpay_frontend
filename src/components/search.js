@@ -25,6 +25,7 @@ export default function Search() {
         <button className ="searchbar find" onClick={near}>Find</button>
         <button className ="searchbar find" onClick={userstate.book}>Book</button>
         <button className ="searchbar find" onClick={userstate.cancel}>Cancel</button>
+        <button className ="searchbar find" onClick={userstate.sell}>Sell</button>
     </center>
     </>
   )
